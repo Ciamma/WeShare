@@ -23,6 +23,15 @@ Quando avete fatto cambiamenti al codice(nel branch):
     - da controllo del codice cercare il tasto commit
     - commenta con quello che hai fatto (non troppo dettagliato ma deve far capire)
     - sincronizza i cambiamenti
+    
+## run app
+---
+To run your project, navigate to the directory and run one of the following yarn commands.
+
+- yarn start # you can open iOS, Android, or web from here, or run them directly with the commands below.
+- yarn android
+- yarn ios # requires an iOS device or macOS for access to an iOS simulator
+- yarn web
  
 
 ## Per buildare l'apk:
