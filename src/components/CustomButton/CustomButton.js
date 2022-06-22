@@ -1,38 +1,50 @@
 import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
-const CustomButton = ({onPress, text, type = "PRIMARY", bgColor, fgColor}) => {
+const CustomButton = ({onPress, text, type = "PRIMARY", bgColor, fgColor, icon, rightButton}) => {
     return (
+        <View>
+        
         <TouchableOpacity
-            onPress= {onPress} 
+            onPress= {onPress}
             style={[
-                styles.container, 
+                styles.button, 
                 styles['container_'+type],
                 bgColor ? {backgroundColor: bgColor} : {},
                 ]}>
-
+            
+             {icon} 
            <Text style={[
                 styles.text, 
+                (!rightButton) ? {textAlign:'center'} : {},
                 styles['text_'+type],
                 fgColor ? {color: fgColor} : {}
-                
-                ]}> {text} </Text>
+                    
+                ]}>{text}</Text>
+           
+       
+        {rightButton}
+
         </TouchableOpacity>
+
+    </View>
+        
     );
 };
 
 
 const styles = StyleSheet.create({
-    container: {
-        width: '100%',
+    button: {
+        borderRadius: 10, 
         padding: 15,
-        marginVertical: 5,
         alignItems: 'center',
-        borderRadius: 5, 
+        marginVertical: 8,
+        width: '100%',
+        flexDirection: 'row'
     },
 
     container_PRIMARY: {
-        backgroundColor: '#000000' //black
+        backgroundColor: 'black',
     },
 
     container_SECONDARY: {
@@ -40,19 +52,41 @@ const styles = StyleSheet.create({
         borderWidth: 2,
     },
 
-    container_TERTIARY: {},
+    container_TERTIARY: {
+        paddingVertical:10
+    },
+
+    container_WHITE: {
+        backgroundColor: 'white'
+    },
+
+    container_CIRCLE: {
+        width: '50%',
+        padding: 15,
+        marginBottom:20,
+        borderRadius: 30, 
+        backgroundColor: 'white',
+    },
 
     text: {
         fontWeight: 'bold',
+        flex: 1,
         color: 'white'
     },
 
     text_SECONDARY: {
-        color: '#000000',
+        color: 'black',
     },
 
     text_TERTIARY: {
-        color: 'gray',
+        color: '#5f5673',
+    },
+
+    text_WHITE: {
+        color: 'black',
+    },
+    text_CIRCLE: {
+        color: 'black',
     }
 });
 

@@ -1,6 +1,8 @@
 import React from 'react';
 import {View, Text} from 'react-native';
 import CustomButton from '../CustomButton';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { SocialIcon } from 'react-native-elements'
 
 
 const SocialSignInButtons = () => {
@@ -15,8 +17,13 @@ const SocialSignInButtons = () => {
             <CustomButton 
                     text= "Sign In with Google"
                     onPress={OnSignInGoogle}
-                    bgColor = "#FAE9EA"
-                    fgColor = "#FF8000"
+                    bgColor = "#fdfefe"
+                    fgColor = "#070707"
+                    icon={ <SocialIcon
+                                type='google'
+                                style={{}}
+                                /> }
+                    
                 />
         </>
     )

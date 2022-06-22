@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, TouchableOpacity, TextInput} from 'react-native';
+import {View, Text, TouchableOpacity, TextInput } from 'react-native';
 
 export default function InputField({
   value,
@@ -10,6 +10,8 @@ export default function InputField({
   keyboardType,
   fieldButtonLabel,
   fieldButtonFunction,
+  secureTextEntry = false,
+  
 }) {
   return (
     <View
@@ -28,7 +30,7 @@ export default function InputField({
           placeholder={label}
           keyboardType={keyboardType}
           style={{flex: 1, paddingVertical: 0}}
-          secureTextEntry
+          secureTextEntry = {secureTextEntry}
           value = {value}
           
         />

@@ -20,6 +20,9 @@ import ProfileScreen2 from './src/screens/Profile/ProfileScreen2';
 
 //SCREENS FOR SHARE TAB
 import ShareScreen from './src/screens/Share/ShareScreen';
+import ListeningScreen from './src/screens/Share/ListeningScreen';
+import DetailShareScreen from './src/screens/Share/DetailShareScreen';
+
 
 //SCREENS FOR CONTACTS TAB
 import ContactsScreen from './src/screens/Contacts/ContactsScreen';
@@ -44,11 +47,9 @@ const AuthStackScreen = () => (
 
 const ProfileStack = createNativeStackNavigator();
 const ProfileStackScreen = () => (
-  <ProfileStack.Navigator screenOptions={{headerShown: true}} > 
+  <ProfileStack.Navigator screenOptions={{headerShown: false}} > 
       <ProfileStack.Screen name="Profile1" component= {ProfileScreen} />
-      <ProfileStack.Screen name="Profile2" component= {ProfileScreen2} options={({ route }) => ({
-                  title: route.params.name
-            })}/>
+      <ProfileStack.Screen name="Profile2" component= {ProfileScreen2}/>
   </ProfileStack.Navigator>
 )
 
@@ -56,6 +57,8 @@ const ShareStack = createNativeStackNavigator();
 const ShareStackScreen = () => (
   <ShareStack.Navigator screenOptions={{headerShown: false}}> 
       <ShareStack.Screen name="Share1" component= {ShareScreen} />
+      <ShareStack.Screen name="Listening" component= {ListeningScreen} />
+      <ShareStack.Screen name="DetailShare" component= {DetailShareScreen} />
   </ShareStack.Navigator>
 )
 
