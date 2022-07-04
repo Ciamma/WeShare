@@ -27,4 +27,5 @@ Future implementations:
     3. feature that allows to share a contact with multiple users
     4. more options in the settings to customize the app
 
-Unfortunately we don't know if we will be able to complete the app, as we have finished the exam, maybe one day in spare time we will finish the app 
+Unfortunately we don't know if we will be able to complete the app, as we have finished the exam, maybe one day in spare time we will finish the app. 
+If you want to contribute, feel free to create a fork from this repo and don't forget to thank Us.
