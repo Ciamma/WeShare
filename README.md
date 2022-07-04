@@ -1,4 +1,8 @@
-# WE SHARE
+# WE SHARE 
+
+![Alt text](/App/assets/images/logo.png)
+
+
 Welcome to WeShare, the new way to quickly share contacts!!!
 
 The project started as a university project for the Human Computer Interaction On The Web course, it is proposed to exchange contacts between two or more users through the NFC technology.
